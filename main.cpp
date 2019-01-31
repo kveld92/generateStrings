@@ -1,6 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <vector>
+#include <string>
 #include <ctime>
 
 std::vector<std::string> generateStrings(std::vector<std::string> possibilities, int size){
