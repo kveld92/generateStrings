@@ -5,7 +5,7 @@
 #include <ctime>
 
 template <typename T>
-std::vector<T> genStrings(std::vector<T> possibilities, int size){
+std::vector<T> generateStrings(std::vector<T> possibilities, int size){
   std::vector<T> items;
   for(int i = 0; i < size; ++i)
     items.push_back(possibilities[std::rand() % possibilities.size()]);
@@ -20,7 +20,7 @@ int countItem(std::vector<std::string> itemList, std::string item){
 int main(){
   srand(time(NULL));
   std::vector<std::string> coinPossibilities = {"heads", "tails"};
-  std::vector<std::string> coinList = genStrings(coinPossibilities, 100);
+  std::vector<std::string> coinList = generateStrings(coinPossibilities, 100);
   int nTails = countItem(coinList, "tails"),
       nHeads = countItem(coinList, "heads");
 
